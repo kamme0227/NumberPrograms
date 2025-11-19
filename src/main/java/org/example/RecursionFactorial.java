@@ -1,6 +1,6 @@
 package org.example;
 
-public class RecursionFactorial {
+public class  RecursionFactorial {
 //    public static void main(String[] args)
 //    {
 //        int number =5;

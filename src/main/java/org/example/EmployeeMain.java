@@ -35,9 +35,9 @@ public class EmployeeMain {
 
         //Group the employees by department
 
-//        Map<String,List<Employee>> department=employees.stream().collect(Collectors.groupingBy(Employee::getDepartment));
-//
-//        department.forEach((e,d)->System.out.println(e +" "+ d));
+        Map<String,List<Employee>> department=employees.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+
+        department.forEach((e,d)->System.out.println(e +" "+ d));
 
         //Average salary of each department
 
@@ -65,10 +65,14 @@ public class EmployeeMain {
 
         //Find the total salary
 
-        double totalSalary=employees.stream().mapToDouble(e->e.getSalary()).sum();
+//        double totalSalary=employees.stream().mapToDouble(e->e.getSalary()).sum();
+//
+//        System.out.println(totalSalary);
 
-        System.out.println(totalSalary);
+        Optional<Employee> highestSalary=employees.stream().max(Comparator.comparingDouble(Employee::getSalary));
+        highestSalary.ifPresent((Employee)->System.out.println(Employee));
     }
+
 
 }
 
