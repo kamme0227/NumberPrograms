@@ -1,6 +1,6 @@
 package org.employee;
 
-import org.example.Employee;
+import org.example.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
