@@ -12,7 +12,7 @@ public class LettersOrDigitExample {
         // I need to get the string starting with numbers
 
         List<String> startingLetterStrings=input.stream()
-                .filter(str->!str.isEmpty() && Character.isLetter(str.charAt(0))).collect(Collectors.toList());
+                .filter(str->!str.isEmpty() && Character.isDigit(str.charAt(0))).collect(Collectors.toList());
 
         System.out.println(startingLetterStrings);
     }

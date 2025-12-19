@@ -20,6 +20,8 @@ public class StringDemo {
         System.out.println(characterCount);
 
 
+        //maximum repeated character
+
         Map.Entry<Character,Long> maxRepeatedElement=characterCount.entrySet().stream().max(Map.Entry.comparingByValue()).orElseThrow();
 
         System.out.println(maxRepeatedElement);

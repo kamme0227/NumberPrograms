@@ -10,7 +10,7 @@ public class CapitalizeFirstLatterOfEachString {
     {
         List<String> list= Arrays.asList("suresh","anusha","loukya","kamme");
 
-       List<String> capitalizeFirstLetter=list.stream().map(word->word.substring(4,5).toUpperCase()+word.substring(5))
+       List<String> capitalizeFirstLetter=list.stream().map(word->word.substring(0,1).toUpperCase()+word.substring(1))
                .collect(Collectors.toList());
 
        capitalizeFirstLetter.forEach(System.out::println);

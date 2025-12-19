@@ -15,10 +15,10 @@ public class CountVowels {
 
         //Given String count vowels
 
-//        String vowels=input.chars().mapToObj(c->(char) c).filter(ch->"aeiou".indexOf(ch)!=-1).map(String::valueOf)
-//                .collect(Collectors.joining());
-//
-//        System.out.println(vowels);
+        String vowels=input.chars().mapToObj(c->(char) c).filter(ch->"aeiou".indexOf(ch)!=-1).map(String::valueOf)
+               .collect(Collectors.joining());
+
+        System.out.println(vowels);
 
        //Count the vowels
 
