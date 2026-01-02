@@ -22,7 +22,7 @@ public class CountVowels {
 
        //Count the vowels
 
-        Map<Character,Long> countVowels=input.chars().mapToObj(c->(char)c).filter(e->"aeiou".indexOf(e)==-1)
+        Map<Character,Long> countVowels=input.chars().mapToObj(c->(char)c).filter(e->"aeiou".indexOf(e)!=-1)
                 .collect(Collectors.groupingBy(ch->ch,Collectors.counting()));
 
         countVowels.forEach((k,v)->System.out.println(k+" "+v));
