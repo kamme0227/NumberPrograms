@@ -10,13 +10,13 @@ public class LongestWordFinder {
     {
         String sentence="The quick, brown fox jumped over the lazy dog!";
 
-//        String result= Arrays.stream(sentence.toLowerCase().replaceAll("[^a-z\\s]"," ").split(" "))
-//                .max(Comparator.comparing(String::length)).orElse(" ");
-//
-//       System.out.println(result);
-        String result= Arrays.stream(sentence.toLowerCase().split("\\s+ "))
+        String result= Arrays.stream(sentence.toLowerCase().replaceAll("[^a-z\\s]"," ").split(" "))
                 .max(Comparator.comparing(String::length)).orElse(" ");
 
-        System.out.println(result);
+       System.out.println(result);
+//        String result= Arrays.stream(sentence.toLowerCase().split("\\s+ "))
+//                .max(Comparator.comparing(String::length)).orElse(" ");
+//
+//        System.out.println(result);
     }
 }
