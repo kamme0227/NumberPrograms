@@ -1,6 +1,6 @@
 package com.codesnippet;
 
-public class ArmstrongNumberCheck {
+public class  ArmstrongNumberCheck {
 
     public static void main(String[] args)
     {
@@ -25,20 +25,22 @@ public class ArmstrongNumberCheck {
 //        }
 //        return sum==original;
 
-        int num=133;
-
+        int num=153;
         int original=num;
         int sum=0;
-        int digits=String.valueOf(num).length();
-        while (num>0)
+        while(num>0)
         {
-            int digit=num%10;
-            sum+=Math.pow(digit,digits);
+            int d=num%10;
+            sum=sum+(d*d*d);
             num=num/10;
         }
-        if(sum==original)
+        if(original==sum)
         {
-            System.out.println("armstrong number");
+            System.out.println("Amstrong Number");
+        }
+        else
+        {
+            System.out.println("not a amstrong number");
         }
     }
 }

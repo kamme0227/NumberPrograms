@@ -7,7 +7,7 @@ public class CheckVowelOrConsonant {
 
     public static void main(String[] args)
     {
-        char ch='k';
+        char ch='i';
 
         boolean isVowelOrConsonant= Stream.of('a','e','i','o','u','A','E','I','O','U').anyMatch(v->v==ch);
 

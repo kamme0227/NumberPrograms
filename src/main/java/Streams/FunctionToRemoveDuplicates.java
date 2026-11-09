@@ -16,14 +16,10 @@ public class FunctionToRemoveDuplicates {
 
     public static String getDuplicates(List<String> arr)
     {
-//        Set<String> input=new HashSet<>();
-//        Set<String> duplicates=arr.stream().filter(str->!input.add(str)).collect(Collectors.toSet());
-//      //  duplicates.forEach(System.out::println);
-//          return duplicates.toString();
-        Map<String,Long> frquencywords=arr.stream()
-                .collect(Collectors.groupingBy(e->e,Collectors.counting()));
-       // frquencywords.forEach((k,v)->System.out.println(k+" "+v));
-        return frquencywords.toString();
+        Set<String> input=new HashSet<>();
+        Set<String> duplicates=arr.stream().filter(str->!input.add(str)).collect(Collectors.toSet());
+      //  duplicates.forEach(System.out::println);
+          return duplicates.toString();
 
     }
 }

@@ -16,10 +16,10 @@ public class ReverseWords {
 
         // reverse the all sentence without using built in function
 
-        String reverseStr= Arrays.stream(sentence.toLowerCase().replaceAll("[^a-z\\s]"," ").split(" "))
-                .map(word->Arrays.stream(word.split("")).reduce("",(rev,ch)->ch + rev)).collect(Collectors.joining(" "));
-
-        System.out.println(reverseStr);
+//        String reverseStr= Arrays.stream(sentence.toLowerCase().replaceAll("[^a-z\\s]"," ").split(" "))
+//                .map(word->Arrays.stream(word.split("")).reduce("",(rev,ch)->ch + rev)).collect(Collectors.joining(" "));
+//
+//        System.out.println(reverseStr);
     }
 }
 

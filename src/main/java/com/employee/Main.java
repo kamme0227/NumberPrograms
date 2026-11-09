@@ -56,10 +56,20 @@ public class Main {
 
         // take first character and maximum repeated character of first letter
 
-        Optional<Map.Entry<Character, Long>> charMap=list.stream().map(e->e.getName().charAt(0))
-                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().stream().max(Map.Entry.comparingByValue());
+//        Optional<Map.Entry<Character, Long>> charMap=list.stream().map(e->e.getName().charAt(0))
+//                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().stream().max(Map.Entry.comparingByValue());
+//
+//        System.out.println(charMap);
 
-        System.out.println(charMap);
+
+        //count of persons whose salary is is between 20 and 30
+
+
+        Long count=list.stream().filter(e->e.getSalary()>=20 && e.getSalary()<=30).count();
+
+        System.out.println(count);
+
+
 
     }
 }

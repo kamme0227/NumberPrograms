@@ -18,7 +18,6 @@ public class SubString {
         int startingIndex=0;
 
         HashSet<Character> set=new HashSet<>();
-
         while(right<str.length())
         {
             if(!set.contains(str.charAt(right)))
@@ -37,6 +36,6 @@ public class SubString {
                 left++;
             }
         }
-        return str.substring(startingIndex,startingIndex+max);
+        return set.toString();
     }
 }

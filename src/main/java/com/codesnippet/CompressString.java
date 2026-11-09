@@ -14,22 +14,40 @@ public class CompressString {
 
     }
 
-    private static String getCompressedString(String input) {
-        List<String> result = new ArrayList<>();
-        AtomicInteger count = new AtomicInteger(1);
+//    private static String getCompressedString(String input) {
+//        List<String> result = new ArrayList<>();
+//        AtomicInteger count = new AtomicInteger(1);
+//
+//        IntStream.range(0, input.length()).forEach(i -> {
+//            if (i > 0 && input.charAt(i) == input.charAt(i - 1)) {
+//                count.incrementAndGet();
+//            } else {
+//                if (i > 0) {
+//                    result.add(String.valueOf(input.charAt(i - 1)) + count);
+//                }
+//                count.set(1);
+//            }
+//
+//        });
+//        result.add(String.valueOf(input.charAt(input.length()- 1)) + count);
+//        return result.stream().collect(Collectors.joining());
+//    }
 
-        IntStream.range(0, input.length()).forEach(i -> {
-            if (i > 0 && input.charAt(i) == input.charAt(i - 1)) {
-                count.incrementAndGet();
-            } else {
-                if (i > 0) {
-                    result.add(String.valueOf(input.charAt(i - 1)) + count);
-                }
-                count.set(1);
+    public static String getCompressedString(String input) {
+        StringBuilder result=new StringBuilder();
+        int count=1;
+        for(int i=1;i<input.length();i++) {
+            if(input.charAt(i)==input.charAt(i-1))
+            {
+                count++;
             }
-
-        });
-        result.add(String.valueOf(input.charAt(input.length()- 1)) + count);
-        return result.stream().collect(Collectors.joining());
+            else
+            {
+                result.append(input.charAt(i)).append(count);
+                count=1;
+            }
+        }
+        result.append(input.charAt(input.length()-1)).append(count);
+        return result.toString();
     }
 }

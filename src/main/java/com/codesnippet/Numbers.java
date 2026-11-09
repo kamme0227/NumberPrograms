@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Numbers {
+public class  Numbers {
 
 
     public static void main(String[] args)
@@ -127,6 +127,7 @@ public class Numbers {
 
         System.out.println(even);
         System.out.println(odd);
+
 
 
         //count occurence each element in a list

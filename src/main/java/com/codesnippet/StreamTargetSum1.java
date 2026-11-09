@@ -13,7 +13,7 @@ public class StreamTargetSum1 {
         int targetSum=40;
 
         List<String> list= IntStream.range(0,arr.length-1).boxed().flatMap(i->IntStream.range(i+1,arr.length)
-                .filter(j->arr[i]+arr[j]==targetSum).mapToObj(j->arr[i]+" "+arr[j]+"="+targetSum)).collect(Collectors.toList());
+                .filter(j->arr[i]+arr[j]==targetSum).mapToObj(j->arr[i]+","+arr[j]+"="+targetSum)).collect(Collectors.toList());
 
         list.forEach(System.out::println);
     }

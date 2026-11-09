@@ -14,7 +14,7 @@ public class MaximumNumber {
             if(num>max)
             {
                 secondMax=max;
-                max=i;
+                max=num;
             }
             else if(num>secondMax && num!=max)
             {

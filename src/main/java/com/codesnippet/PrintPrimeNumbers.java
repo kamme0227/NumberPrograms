@@ -1,6 +1,6 @@
 package com.codesnippet;
 
-public class PrintPrimeNumbers {
+public class  PrintPrimeNumbers {
 
     public static void main(String[] args) {
 

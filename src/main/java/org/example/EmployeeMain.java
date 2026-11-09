@@ -53,7 +53,7 @@ public class EmployeeMain {
 //
 //        secondHighestSalary.ifPresent(System.out::println);
 
-        //Convery list employeed to map<id ,name>
+        //Convert list employees to map<id ,name>
 
 //        Map<Integer,String> empMap=employees.stream().collect(Collectors.toMap(Employee::getId,Employee::getName));
 //

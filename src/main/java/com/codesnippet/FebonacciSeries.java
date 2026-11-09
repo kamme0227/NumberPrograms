@@ -1,6 +1,6 @@
 package com.codesnippet;
 
-public class FebonacciSeries {
+public class  FebonacciSeries {
 
     public static void main(String[] args)
     {

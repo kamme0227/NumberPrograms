@@ -12,8 +12,8 @@ public class ComparatorExample
         List<Student> list= Arrays.asList(new Student(23,"mike"),new Student(25,"naresh")
                 ,new Student(27,"loukya"));
 
-        Comparator<Student> sortByName=(s1, s2)->s1.name.compareTo(s2.name);
-        Comparator<Student> sortByage=(s1,s2)->s1.age-s2.age;
+        Comparator<Student> sortByName= Comparator.comparing(s -> s.name);
+        Comparator<Student> sortByage= Comparator.comparingInt(s -> s.age);
 
 
         Collections.sort(list,sortByName);

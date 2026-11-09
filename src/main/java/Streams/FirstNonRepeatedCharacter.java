@@ -10,9 +10,9 @@ public class FirstNonRepeatedCharacter {
         String str = "suresh";
 
         // first non repeated character
-//        Character result = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
-//                .entrySet().stream().filter(s -> s.getValue() == 1).findFirst().orElse(null);
-//        System.out.println(ch);
+        Character result = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+                .entrySet().stream().filter(s -> s.getValue() == 1).findFirst().get().getKey();
+        System.out.println(result);
 
         //count each character
 
